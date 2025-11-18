@@ -1,0 +1,53 @@
+omnivisioncnn/
+├── README.md
+├── LICENSE
+├── .github/
+│ └── workflows/ci.yml
+├── configs/
+│ ├── pretrain_simclr.yaml
+│ ├── multitask_train.yaml
+│ └── deploy.yaml
+├── docs/
+│ ├── architecture.md
+│ └── experiments.md
+├── data/
+│ └── README.md
+├── src/
+│ ├── omnivision/
+│ │ ├── __init__.py
+│ │ ├── backbone.py
+│ │ ├── heads/
+│ │ │ ├── classification.py
+│ │ │ ├── detection.py
+│ │ │ ├── segmentation.py
+│ │ │ ├── depth.py
+│ │ │ ├── pose.py
+│ │ │ └── superres.py
+│ │ ├── simclr.py
+│ │ ├── multitask.py
+│ │ ├── fewshot.py
+│ │ └── utils/
+│ │ ├── augmentations.py
+│ │ ├── losses.py
+│ │ ├── metrics.py
+│ │ └── export.py
+│ ├── train/
+│ │ ├── pretrain_simclr.py
+│ │ ├── train_multitask.py
+│ │ └── train_detection.py
+│ ├── infer/
+│ │ ├── api.py
+│ │ └── demo_client.py
+│ └── tools/
+│ ├── convert_onnx.py
+│ ├── quantize.py
+│ └── bench_latency.py
+├── notebooks/
+│ ├── 01_pretrain_demo.ipynb
+│ └── 02_multitask_eval.ipynb
+├── examples/
+│ ├── sample_images/
+│ └── demo_videos/
+└── docker/
+├── Dockerfile.gpu
+└── docker-compose.yml
